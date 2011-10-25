@@ -1,0 +1,328 @@
+/* ----------------------------------------------------------------------------- HEADER */
+
+#banner {
+	position: 	relative;
+	margin: 	16px auto 0;
+	z-index: 	1000;
+	
+	.container {
+		padding: 	0;
+	}
+}
+
+#logo {
+	float: 		left;
+	width: 		300px;
+	height: 	75px;
+	margin: 	0 0 16px;
+	padding: 	0;
+}
+
+#nav-main ul {
+	position: 	relative;
+	list-style: none;
+	margin: 	0 0 16px 0;
+	padding: 	0;
+	float: 		left;
+	width: 		100%;
+	
+	li {
+		float: 		left;
+		margin: 	0;
+		*zoom: 		1;
+		
+		&:hover {
+			position: 		relative;
+		}
+		
+		a {
+			text-decoration:none;
+			display: 		block;
+			font-size: 		14px;
+			padding: 		8px 16px;
+			margin: 		0;
+		}
+	}
+	
+	ul {
+		position: 	absolute;
+		visibility: hidden;
+		top: 		100%;
+		left: 		0;
+		width: 		200px;
+		padding: 	0;
+		
+		li {
+			float: 			none;
+			
+			a {
+				font-size: 		12px;
+				padding: 		4px 16px;
+				width: 			168px;
+				/* account for the width of ul#nav-main ul and the padding on the anchor */
+				display: inline-block;
+			}
+			
+		}
+		
+		ul {
+			left: 			100%;
+			top: 			0;
+		}
+	}
+	
+	li:hover > ul {
+		visibility: visible;
+	}
+}
+
+#nav-utility {
+	position: 	absolute;
+	top: 		0;
+	right: 		0;
+	
+	ul {
+		list-style: 	none;
+		margin: 		0;
+		padding: 		0;
+		float: 			right;
+		width: 			auto;
+		position: 		relative;
+		
+		li {
+			float: 			left;
+			position: 		relative;
+			
+			a {
+				display: 		block;
+				float: 			left;
+				padding: 		2px 6px;
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------------- CONTENT */
+
+#content {
+	margin-bottom:	24px;
+	
+	.container {
+		width: 			auto;
+		position: 		relative;
+		padding: 		0;
+	}
+}
+
+/* ----------------------------------------------------------------------------- MAIN CONTENT */
+
+#main {
+	position: 		relative;
+	
+	.container {
+		padding: 		0;
+	}
+}
+
+/* ----------------------------------------------------------------------------- SIDEBAR */
+
+#sidebar {
+	position: 		relative;
+	
+	.container {
+		width: 			auto;
+		padding: 		0;
+	}
+	
+	.widget {
+		clear: 			both;
+		margin-bottom: 	1.5em;
+		
+		.gform_wrapper ul {
+			padding: 		0;
+			list-style-type:none;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------------- POSTS */
+
+.hentry {
+	header {
+		margin-bottom: 	1.5em;
+	}
+	
+	h1 {
+		line-height: 	1.2em;
+		margin-bottom: 	0.2em;
+	}
+	
+	h2 {
+		&:first-child {
+			line-height: 	1.2em;
+			margin-bottom: 	0;
+		}
+		
+		a {
+			text-decoration:none;
+		}
+	}
+	
+	time {
+		display: 		block;
+		font-size: 		1.2em;
+		position: 		relative;
+	}
+}
+
+/* ----------------------------------------------------------------------------- POST AND COMMENTS NAV */
+
+#post-nav {
+	clear: 			both;
+	*display: 		inline-block;
+	
+	&:after {
+		content: 		"\0020";
+		display: 		block;
+		height: 		0;
+		clear: 			both;
+		visibility: 	hidden;
+		overflow: 		hidden;
+	}
+	
+	.post-previous {
+		float: 			left;
+		width: 			50%;
+	}
+	
+	.post-next {
+		float: 			right;
+		width: 			50%;
+		text-align: 	right;
+		
+		a {
+			float: 			right;
+		}
+	}
+}
+
+#comments-nav {
+	clear: 			both;
+	margin: 		0 0 1.5em 0;
+	*display: 		inline-block;
+	
+	&:after {
+		content: 		"\0020";
+		display: 		block;
+		height: 		0;
+		clear: 			both;
+		visibility: 	hidden;
+		overflow: 		hidden;
+	}
+	
+	.comments-previous {
+		float: 			left;
+		width: 			50%;
+	}
+	
+	.comments-next {
+		float: 			right;
+		width: 			50%;
+		text-align: 	right;
+		
+		a {
+			float: 			right;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------------- POST COMMENTS */
+
+ol.commentlist {
+	
+	img.avatar {
+		float: 			left;
+		margin-right: 	10px;
+	}
+	
+	time {
+		display: 		block;
+		font-size: 		1em;
+		margin-bottom: 	0.5em;
+		position: 		relative;
+	}
+	
+	.comment-reply-link {
+		display: 		block;
+		margin-bottom: 	1.5em;
+	}
+}
+
+#commentform {
+	*display: 		inline-block;
+	
+	p {
+		margin-bottom: 	1em;
+	}
+	
+	label, textarea {
+		display: 		block;
+	}
+	
+	input.button {
+		margin-top: 	0.5em;
+	}
+	
+	&:after {
+		content: 		"\0020";
+		display: 		block;
+		height: 		0;
+		clear: 			both;
+		visibility: 	hidden;
+		overflow: 		hidden;
+	}
+}
+
+/* ----------------------------------------------------------------------------- GALLERY */
+
+figure.gallery-item {
+	float: 			left;
+	margin: 		0 1em 1em 0;
+	position: 		relative;
+	
+	figcaption {
+		display: 		none;
+	}
+}
+
+/* ----------------------------------------------------------------------------- FOOTER */
+
+#content-info {
+	clear: 			both;
+	position:		relative;
+	
+	> .container {
+		padding: 		0 0 1.5em;
+	}
+	
+	ul.menu {
+		margin: 		0 0 24px;
+		padding: 		0;
+		list-style-type:none;
+		
+		li {
+			display: 		inline;
+			margin-right: 	1em;
+		}
+	}
+	
+	p.copy small {
+		font-size: 		1em;
+	}
+}
+
+/* ----------------------------------------------------------------------------- SEARCH FORM */
+
+#searchform #s {
+	padding: 5px;
+}

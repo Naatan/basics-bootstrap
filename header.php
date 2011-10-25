@@ -1,66 +1,57 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<html class="no-js <?php echo Basics::get_browser(); ?>" <?php echo Basics::language_attributes(); ?>>
 <head>
 	<meta charset="utf-8">
-
+	
+	<!-- ----------------------------------------------------------------------------- SEO INFO -->
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+	<meta name="title" content="<?php wp_title('|', true, 'right'); bloginfo('name'); ?>" />
+	<meta name="description" content="<?php bloginfo('description'); ?>" />
 	
+	<!-- ----------------------------------------------------------------------------- MOBILE DEVICES -->
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-
-	<?php roots_stylesheets(); ?>
 	
+	<!-- ----------------------------------------------------------------------------- STYLESHEETS -->
+	<link 	rel="stylesheet" 		href="<?php echo site_url(); ?>/css/blueprint/screen.css" 	type="text/css" media="screen, projection">
+	<link 	rel="stylesheet" 		href="<?php echo site_url(); ?>/css/blueprint/print.css" 	type="text/css" media="print"> 
+	<!--[if lt IE 8]>
+	  <link rel="stylesheet" 		href="<?php echo site_url(); ?>/css/blueprint/ie.css" 		type="text/css" media="screen, projection">
+	<![endif]-->
+	<link 	rel="stylesheet" 		href="<?php echo site_url(); ?>/css/basics.css" 			type="text/css" media="screen, projection">
+	<link	rel="stylesheet/less" 	href="<?php echo site_url(); ?>/css/style.less" 			type="text/css">
+
+	<!-- ----------------------------------------------------------------------------- RSS FEED -->
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 
-	<script src="<?php echo get_template_directory_uri(); ?>/js/libs/modernizr-2.0.6.min.js"></script>
+	<!-- ----------------------------------------------------------------------------- SCRIPT LIBRARIES -->
+	<script src="<?php echo site_url(); ?>/js/libs/modernizr-2.0.6.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+	<script src="<?php echo site_url(); ?>/js/libs/less-1.1.3.min.js"></script>
 
+	<!-- ----------------------------------------------------------------------------- WP SCRIPTS -->
 	<?php wp_head(); ?>
-	<?php roots_head(); ?>
 
-	<script defer src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>
-	<script defer src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+	<!-- ----------------------------------------------------------------------------- SCRIPTS -->
+	<script defer src="<?php echo site_url(); ?>/js/plugins.js"></script>
+	<script defer src="<?php echo site_url(); ?>/js/script.js"></script>
 </head>
 
-<body <?php body_class(roots_body_class()); ?>>
+<body <?php body_class(Basics::body_class()); ?>>
 
-	<?php roots_wrap_before(); ?>
 	<div id="wrap" class="container" role="document">
-	<?php roots_header_before(); ?>
-		<header id="banner" class="<?php global $roots_options; echo $roots_options['container_class']; ?>" role="banner">
-			<?php roots_header_inside(); ?>
+		<header id="banner" role="banner">
 			<div class="container">
 	
-				<a id="logo" href="<?php echo home_url(); ?>/">
-					<img src="<?php echo get_header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo('name'); ?>">
-				</a>
+				<figure clas="logo"></figure>
 				
 				<nav id="nav-main" role="navigation">
-					<?php if ($roots_options['clean_menu']) { ?>
-						<?php wp_nav_menu(array('theme_location' => 'primary_navigation', 'walker' => new roots_nav_walker())); ?>
-					<?php } else { ?>
-						<?php wp_nav_menu(array('theme_location' => 'primary_navigation')); ?>
-					<?php } ?>
+					<?php wp_nav_menu(array('theme_location' => 'primary_navigation')); ?>
 				</nav>
 				
-				<?php 					
-					$utility_nav = wp_get_nav_menu_object('Utility Navigation');
-					$utility_nav_term_id = (int) $utility_nav->term_id;
-					$menu_items = wp_get_nav_menu_items($utility_nav_term_id);					
-					if ($menu_items || !empty($menu_items)) {
-				?>
 				<nav id="nav-utility">
-					<?php if ($roots_options['clean_menu']) { ?>
-						<?php wp_nav_menu(array('theme_location' => 'utility_navigation', 'walker' => new roots_nav_walker())); ?>
-					<?php } else { ?>
-						<?php wp_nav_menu(array('theme_location' => 'utility_navigation')); ?>
-					<?php } ?>
+					<?php wp_nav_menu(array('theme_location' => 'utility_navigation')); ?>
 				</nav>
-				<?php } ?>
 
 			</div>
 		</header>
-	<?php roots_header_after(); ?>

@@ -1,0 +1,210 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: basics\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-10-24 16:32-0500\n"
+"PO-Revision-Date: 2011-10-24 16:32-0500\n"
+"Last-Translator: Nathan Rijksen <n.rijksen@gmail.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /home/nathan/Sites/wordpress/wp-content/themes/basics\n"
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/index.php:7
+msgid "Latest Posts"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/archive.php:10
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/archive.php:12
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/archive.php:14
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/404.php:8
+msgid "File Not Found"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/404.php:10
+msgid "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/404.php:13
+msgid "Please try the following:"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/404.php:16
+msgid "Check your spelling"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/404.php:17
+#, php-format
+msgid "Return to the <a href=\"%s\">home page</a>"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/404.php:18
+msgid "Click the <a href=\"javascript:history.back()\">Back</a> button"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/search.php:7
+msgid "Search Results for"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:9
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:10
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:11
+msgid "(Edit)"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:16
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:35
+msgid "Please do not load this page directly."
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:40
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:53
+msgid "No Responses to"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:53
+msgid "One Response to"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:53
+msgid "% Responses to"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:60
+msgid "&larr; Older comments"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:61
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:72
+msgid "Comments are closed."
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:83
+msgid "Leave a Reply"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:83
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:88
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:96
+#, php-format
+msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:96
+msgid "Log out of this account"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:96
+msgid "Log out &raquo;"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:101
+msgid "Name"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:101
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:105
+msgid " (required)"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:105
+msgid "Email (will not be published)"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:109
+msgid "Website"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:116
+msgid "Comment"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/comments.php:119
+msgid "Submit Comment"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/searchform.php:2
+msgid "Search for:"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/searchform.php:3
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/searchform.php:4
+msgid "Search"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/loop.php:5
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/loop.php:19
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/loop-single.php:9
+#, php-format
+msgid "Posted on %s at %s."
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/loop.php:20
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/loop-single.php:10
+msgid "Written by"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/loop.php:42
+msgid "&larr; Older posts"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/loop.php:43
+msgid "Newer posts &rarr;"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/loop-single.php:18
+msgid "Pages:"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/inc/basics.php:16
+msgid "Primary Navigation"
+msgstr ""
+
+#: /home/nathan/Sites/wordpress/wp-content/themes/basics/inc/basics.php:17
+msgid "Utility Navigation"
+msgstr ""
+
