@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-		<div id="content">
+		<div id="content" class="span24">
 		
-			<div id="main" role="main">
+			<div id="main" class="span14" role="main">
 				<div class="container">
 				
 					<h1><?php _e('File Not Found', 'basics'); ?></h1>

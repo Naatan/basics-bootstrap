@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
-		<div id="content">
+		<div id="content" class="row">
 		
-			<div id="main" role="main">
+			<div id="main" class="span14" role="main">
 				<div class="container">
 					<?php get_template_part('loop', 'single'); ?>
 				</div>	
 			</div><!-- /#main -->
 			
-			<aside id="sidebar" role="complementary">
+			<aside id="sidebar" class="span8 prepend-1" role="complementary">
 				<div class="container">
 					<?php get_sidebar(); ?>
 				</div>

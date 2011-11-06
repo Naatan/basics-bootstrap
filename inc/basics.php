@@ -18,6 +18,45 @@ class Basics {
 		));
 	}
 	
+	static function nav_menu_dropdown_filter($items) {
+		$dom = new DOMDocument();
+		$dom->loadHTML($items);
+		
+		if ($nodes = $dom->getElementsByTagName('ul')) {
+			for ($i = 0; $i < $nodes->length; $i++) {
+				$node = $nodes->item($i);
+				
+				$class = $node->getAttribute('class');
+				$node->setAttribute('class',$class . ' dropdown-menu');
+				
+				$parent = $node->parentNode;
+				
+				$class = $parent->getAttribute('class');
+				$parent->setAttribute('class',$class . ' dropdown');
+				
+				for ($x = 0; $x < $parent->childNodes; $x++) {
+					
+					$child = $parent->childNodes->item($x);
+					
+					if ($child->nodeType != XML_ELEMENT_NODE) {
+						continue;
+					}
+					
+					if ($name = $child->nodeName == 'a') {
+						$class = $child->getAttribute('class');
+						$child->setAttribute('class',$class . ' dropdown-toggle');
+						break;
+					}
+					
+				}
+				
+			}
+		}
+		
+		$items = $dom->saveHTML();
+		return preg_replace('/.*?body\>(.*)\<\/body.*/si','$1',$items);
+	}
+	
 	static function hooks() {
 		add_action('generate_rewrite_rules', 	array('Basics','rewrite_rules'));
 		add_action('mod_rewrite_rules', 		array('Basics','htaccess_rules'));
@@ -25,6 +64,8 @@ class Basics {
 		add_action('init', 						array('Basics','init'));
 		
 		add_action('after_setup_theme', array('Basics', 'setup'));
+		
+		add_filter('wp_nav_menu_items', array('Basics', 'nav_menu_dropdown_filter'));
 		
 		$sidebars = array('Sidebar', 'Footer');
 		foreach ($sidebars as $sidebar) {
@@ -100,7 +141,7 @@ class Basics {
 		$theme_name = next(explode('/themes/', get_stylesheet_directory()));
 		global $wp_rewrite;
 		$new_non_wp_rules = array(
-			'css/(.*)'      => 'wp-content/themes/'. $theme_name . '/css/$1',
+			'less/(.*)'      => 'wp-content/themes/'. $theme_name . '/less/$1',
 			'js/(.*)'       => 'wp-content/themes/'. $theme_name . '/js/$1',
 			'img/(.*)'      => 'wp-content/themes/'. $theme_name . '/img/$1',
 			'plugins/(.*)'  => 'wp-content/plugins/$1'

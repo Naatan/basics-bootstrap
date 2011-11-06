@@ -12,13 +12,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
 	<!-- ----------------------------------------------------------------------------- STYLESHEETS -->
-	<link 	rel="stylesheet" 		href="<?php echo site_url(); ?>/css/blueprint/screen.css" 	type="text/css" media="screen, projection">
-	<link 	rel="stylesheet" 		href="<?php echo site_url(); ?>/css/blueprint/print.css" 	type="text/css" media="print"> 
-	<!--[if lt IE 8]>
-	  <link rel="stylesheet" 		href="<?php echo site_url(); ?>/css/blueprint/ie.css" 		type="text/css" media="screen, projection">
-	<![endif]-->
-	<link 	rel="stylesheet" 		href="<?php echo site_url(); ?>/css/basics.css" 			type="text/css" media="screen, projection">
-	<link	rel="stylesheet/less" 	href="<?php echo site_url(); ?>/css/style.less" 			type="text/css">
+	<link	rel="stylesheet/less" 	href="<?php echo site_url(); ?>/less/style.less" 			type="text/css">
 
 	<!-- ----------------------------------------------------------------------------- RSS FEED -->
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
@@ -27,31 +21,38 @@
 	<script src="<?php echo site_url(); ?>/js/libs/modernizr-2.0.6.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script>window.jQuery || document.write('/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
-	<script src="<?php echo site_url(); ?>/js/libs/less-1.1.3.min.js"></script>
+	<script src="<?php echo site_url(); ?>/js/libs/less-1.1.4.min.js"></script>
 
 	<!-- ----------------------------------------------------------------------------- WP SCRIPTS -->
 	<?php wp_head(); ?>
 
 	<!-- ----------------------------------------------------------------------------- SCRIPTS -->
-	<script defer src="<?php echo site_url(); ?>/js/plugins.js"></script>
-	<script defer src="<?php echo site_url(); ?>/js/script.js"></script>
+	<script src="<?php echo site_url(); ?>/js/plugins.js"></script>
+	<script src="<?php echo site_url(); ?>/js/script.js"></script>
+	
+	<!--<script src="<?php echo site_url(); ?>/js/libs/bootstrap/bootstrap-alerts.js"></script>-->
+	<!--<script src="<?php echo site_url(); ?>/js/libs/bootstrap/bootstrap-buttons.js"></script>-->
+	<script src="<?php echo site_url(); ?>/js/libs/bootstrap/bootstrap-dropdown.js"></script>
+	<!--<script src="<?php echo site_url(); ?>/js/libs/bootstrap/bootstrap-modal.js"></script>-->
+	<!--<script src="<?php echo site_url(); ?>/js/libs/bootstrap/bootstrap-popover.js"></script>-->
+	<!--<script src="<?php echo site_url(); ?>/js/libs/bootstrap/bootstrap-scrollspy.js"></script>-->
+	<!--<script src="<?php echo site_url(); ?>/js/libs/bootstrap/bootstrap-tabs.js"></script>-->
+	<!--<script src="<?php echo site_url(); ?>/js/libs/bootstrap/bootstrap-twipsy.js"></script>-->
+	
 </head>
 
 <body <?php body_class(Basics::body_class()); ?>>
 
-	<div id="wrap" class="container" role="document">
-		<header id="banner" role="banner">
+	<div class="topbar">
+		<div class="topbar-inner">
 			<div class="container">
-	
-				<figure clas="logo"></figure>
-				
-				<nav id="nav-main" role="navigation">
-					<?php wp_nav_menu(array('theme_location' => 'primary_navigation')); ?>
-				</nav>
-				
-				<nav id="nav-utility">
-					<?php wp_nav_menu(array('theme_location' => 'utility_navigation')); ?>
-				</nav>
-
+				<a href="#" class="brand">Genia</a>
+				<?php
+				wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav'));
+				?>
+				<?php wp_nav_menu(array('theme_location' => 'utility_navigation', 'menu_class' => 'secondary-nav')); ?>
 			</div>
-		</header>
+		</div>
+    </div>
+
+	<div id="wrap" class="container" role="document">

@@ -1,117 +1,55 @@
-/* ----------------------------------------------------------------------------- HEADER */
+/* ----------------------------------------------------------------------------- IMPORTS */
 
-#banner {
-	position: 	relative;
-	margin: 	16px auto 0;
-	z-index: 	1000;
+@import 'bootstrap/bootstrap.less';
+
+/* ----------------------------------------------------------------------------- HELPERS */
+
+.visuallyhidden {
+    border: 0 none;
+    clip: rect(0pt, 0pt, 0pt, 0pt);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 	
-	.container {
-		padding: 	0;
+	.focusable:active, .focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
 	}
+	
 }
 
-#logo {
-	float: 		left;
-	width: 		300px;
-	height: 	75px;
-	margin: 	0 0 16px;
-	padding: 	0;
-}
+/* ----------------------------------------------------------------------------- LINKS */
 
-#nav-main ul {
-	position: 	relative;
-	list-style: none;
-	margin: 	0 0 16px 0;
-	padding: 	0;
-	float: 		left;
-	width: 		100%;
-	
-	li {
-		float: 		left;
-		margin: 	0;
-		*zoom: 		1;
-		
-		&:hover {
-			position: 		relative;
-		}
-		
-		a {
-			text-decoration:none;
-			display: 		block;
-			font-size: 		14px;
-			padding: 		8px 16px;
-			margin: 		0;
-		}
-	}
-	
-	ul {
-		position: 	absolute;
-		visibility: hidden;
-		top: 		100%;
-		left: 		0;
-		width: 		200px;
-		padding: 	0;
-		
-		li {
-			float: 			none;
-			
-			a {
-				font-size: 		12px;
-				padding: 		4px 16px;
-				width: 			168px;
-				/* account for the width of ul#nav-main ul and the padding on the anchor */
-				display: inline-block;
-			}
-			
-		}
-		
-		ul {
-			left: 			100%;
-			top: 			0;
-		}
-	}
-	
-	li:hover > ul {
-		visibility: visible;
-	}
-}
-
-#nav-utility {
-	position: 	absolute;
-	top: 		0;
-	right: 		0;
-	
-	ul {
-		list-style: 	none;
-		margin: 		0;
-		padding: 		0;
-		float: 			right;
-		width: 			auto;
-		position: 		relative;
-		
-		li {
-			float: 			left;
-			position: 		relative;
-			
-			a {
-				display: 		block;
-				float: 			left;
-				padding: 		2px 6px;
-			}
-		}
-	}
+.button, #post-nav a, #comments-nav a {
+	display: inline-block;
+	padding: 8px 16px;
+	cursor: pointer;
+	width: auto;
+	overflow: visible;
 }
 
 /* ----------------------------------------------------------------------------- CONTENT */
 
-#content {
-	margin-bottom:	24px;
+#wrap {
+	margin-top: 50px;
 	
-	.container {
-		width: 			auto;
-		position: 		relative;
-		padding: 		0;
+	#content {
+		margin-bottom:	24px;
+		
+		.container {
+			width: 			auto;
+			position: 		relative;
+			padding: 		0;
+		}
 	}
+	
 }
 
 /* ----------------------------------------------------------------------------- MAIN CONTENT */
@@ -147,7 +85,7 @@
 
 /* ----------------------------------------------------------------------------- POSTS */
 
-.hentry {
+.entry {
 	header {
 		margin-bottom: 	1.5em;
 	}
@@ -325,4 +263,10 @@ figure.gallery-item {
 
 #searchform #s {
 	padding: 5px;
+}
+
+/* ----------------------------------------------------------------------------- FORM ELEMENTS */
+
+.button {
+	.btn;
 }

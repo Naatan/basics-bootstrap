@@ -1,4 +1,4 @@
-		<footer id="footer" role="contentinfo">
+		<footer id="footer" class="span24" role="contentinfo">
 			<div class="container">
 				<?php dynamic_sidebar("Footer"); ?>
 				<p class="copy"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></small></p>
